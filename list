@@ -1,4 +1,4 @@
 <li><a href="#!html" onclick="fetchCode('html')">HTML</a></li>
     <li><a href="#!css" onclick="fetchCode('css');">CSS</a></li>
     <li><a href="#!java" onclick="fetchCode('java');">JavaScript</a></li>
-    <li>AJAX</li>
+
