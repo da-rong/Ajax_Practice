@@ -30,14 +30,12 @@
       fetchCode(location.hash.substr(2));
     }
     else
-    {'welcome'}
+    {fetchCode('welcome');
+    }
      fetch('list').then(function(response){
         response.text().then(function(text){
-          document.querySelector('#nav').innerHTML = text;
-        })
-      });
-      
-        
+          console.log(text);
+    
     var items = text.split(',');
     var i = 0;
     var tags = '';
@@ -51,6 +49,12 @@
     } 
     console.log(items);
     document.querySelector('#nav').innerHTML = tags;
+          
+        })
+      });
+      
+        
+    
     
   </script>
 </body>
