@@ -12,9 +12,9 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a onclick="fetchCode('html')">HTML</a></li>
-    <li><a onclick="fetchCode('css');">CSS</a></li>
-    <li><a onclick="fetchCode('java');">JavaScript</a></li>
+    <li><a href="#!html" onclick="fetchCode('html')">HTML</a></li>
+    <li><a href="#!css" onclick="fetchCode('css');">CSS</a></li>
+    <li><a href="#!java" onclick="fetchCode('java');">JavaScript</a></li>
   </ol>
   <article></article>
 
@@ -25,6 +25,13 @@
           document.querySelector('article').innerHTML = text;
         })
       });
+    }
+    
+    if(location.hash)
+    {fetchCode(location.hash.substr(2));
+    }
+    else{
+      fetchCode('welcome');
     }
   </script>
 </body>
