@@ -36,7 +36,22 @@
           document.querySelector('#nav').innerHTML = text;
         })
       });
-
+      
+        
+    var items = text.split(',');
+    var i = 0;
+    var tags = '';
+    while(i < items.length)
+    {
+      var item = items[i];
+      item = item.trim();
+      var tag = '<li><a href="#!'+item+'"onclick="fetchCode(\''+item+'\')">'+item+'</a></li>';
+      tags = tags+tag;
+      i++;
+    } 
+    console.log(items);
+    document.querySelector('#nav').innerHTML = tags;
+    
   </script>
 </body>
 </html>
